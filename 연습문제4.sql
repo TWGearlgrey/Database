@@ -287,6 +287,8 @@ FROM `Customer` AS a
 LEFT JOIN `Order` AS b ON a.custId = b.custId
 WHERE `bookId` IS NULL;
 
+SELECT `name` FROM `Customer` WHERE `custId` NOT IN(SELECT DISTINCT `custId` FROM `Order`);
+
 
 #실습4-44
 INSERT INTO `Book` (`bookId`, `bookName`, `publisher`) VALUES (11, '스포츠의학', '한솔의학서적');
