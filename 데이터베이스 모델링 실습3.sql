@@ -135,9 +135,9 @@ SELECT
 	`userName`,
 	`userHp`,
 	`userPoint`,
-	SUM(`point`)
+	IF(SUM(`point`) IS NULL, 0, SUM(`point`)) AS `적립포인트 총합`
 FROM `Users`  AS a
-JOIN `Points` AS b ON a.userId = b.userId
+LEFT JOIN `Points` AS b ON a.userId = b.userId
 GROUP BY a.`userId`;
 
 
@@ -178,8 +178,8 @@ SELECT
 	`prodNo`,
 	`prodName`,
 	`prodPrice`,
-	`prodSold`,
-	`prodPrice`*(100-`prodDiscount`)/100 AS `할인된 가격`
+	`prodDiscount`,
+	FLOOR(`prodPrice`*(1-`prodDiscount`/100)) AS `할인된 가격`
 FROM `Products`;
 
 
@@ -191,7 +191,7 @@ SELECT
 	`prodStock`,
 	`sellerManager`
 FROM `Sellers`   AS a
-JOIN `Products` AS b ON a.sellerNo = b.sellerNo
+JOIN `Products`  AS b ON a.sellerNo = b.sellerNo
 WHERE `sellerManager`='고소영';
 
 
@@ -201,17 +201,16 @@ SELECT
 	`sellerBizName`,
 	`sellerManager`,
 	`sellerPhone`
-FROM `Sellers`    AS a
-JOIN `Products`   AS b ON a.sellerNo = b.sellerNo
-LEFT JOIN `OrderItems` AS c ON b.prodNo = c.prodNo
-WHERE `orderNo` IS NULL;
+FROM `Sellers` AS a
+LEFT JOIN `Products` AS b ON a.sellerNo = b.sellerNo
+WHERE `prodNo` IS NULL;
 
 
 #문제9. 모든 주문상세내역 중 개별 상품 가격과 개수 그리고 할인율이 적용된 최종 총합을 구하고
 # 최종 총합이 10만원 이상, 그리고 큰 금액순으로 '주문번호', '최종총합'을 조회하시오.
 SELECT 
 	`orderNo`,
-	SUM(`itemPrice`*`itemCount`*((100-`itemDiscount`)/100)) AS `최종종합`
+	FLOOR(SUM(`itemPrice`*`itemCount`*((1-`itemDiscount`/100)))) AS `최종종합`
 FROM `orderItems`
 GROUP BY `orderNo`
 HAVING `최종종합` >= 100000
