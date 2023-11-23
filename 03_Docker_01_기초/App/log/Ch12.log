@@ -1,0 +1,29 @@
+2023-11-21T18:54:55.961+09:00  INFO 5860 --- [main] kr.chhak.HelloSpringAppApplication       : Starting HelloSpringAppApplication v0.0.1-SNAPSHOT using Java 17.0.8 with PID 5860 (C:\Users\earlgrey\Desktop\workspace\Docker\App\HelloSpringApp-0.0.1-SNAPSHOT.jar started by earlgrey in C:\Users\earlgrey\Desktop\workspace\Docker\App)
+2023-11-21T18:54:55.962+09:00  INFO 5860 --- [main] kr.chhak.HelloSpringAppApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-11-21T18:54:56.380+09:00  INFO 5860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T18:54:56.401+09:00  INFO 5860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+2023-11-21T18:54:56.893+09:00  INFO 5860 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-11-21T18:54:56.901+09:00  INFO 5860 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T18:54:56.901+09:00  INFO 5860 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-21T18:54:56.954+09:00  INFO 5860 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21T18:54:56.955+09:00  INFO 5860 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 957 ms
+2023-11-21T18:54:57.111+09:00  INFO 5860 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-21T18:54:57.169+09:00  INFO 5860 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-21T18:54:57.172+09:00  INFO 5860 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-21T18:54:57.371+09:00  INFO 5860 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-21T18:54:57.397+09:00  INFO 5860 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21T18:54:57.621+09:00  INFO 5860 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@654b72c0
+2023-11-21T18:54:57.622+09:00  INFO 5860 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21T18:54:57.636+09:00  WARN 5860 --- [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL57Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-21T18:54:57.637+09:00  WARN 5860 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-11-21T18:54:57.857+09:00  INFO 5860 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-21T18:54:57.859+09:00  INFO 5860 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T18:54:57.886+09:00  WARN 5860 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-21T18:54:58.172+09:00  INFO 5860 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-21T18:54:58.186+09:00  INFO 5860 --- [main] kr.chhak.HelloSpringAppApplication       : Started HelloSpringAppApplication in 2.546 seconds (process running for 2.898)
+2023-11-21T18:55:03.189+09:00  INFO 5860 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21T18:55:03.190+09:00  INFO 5860 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-11-21T18:55:03.190+09:00  INFO 5860 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-11-21T19:19:30.550+09:00  INFO 5860 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T19:19:30.554+09:00  INFO 5860 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21T19:19:30.564+09:00  INFO 5860 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

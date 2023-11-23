@@ -1,0 +1,11 @@
+#docker-compose.yml
+version: "3.8"
+services:
+  chhak_db:
+  image: mysql
+  container_name: twgearlgrey_db
+  ports:
+    - 3306:3306
+  environment:
+    MYSQL_ROOT_PASSWORD: 1234
+    MYSQL_DATABASE: twgearlgrey
